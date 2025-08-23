@@ -43,9 +43,10 @@ void Handlerrors(){
 
 int main(){
     cout << "Temperature Converter" << endl;
+    while (true){
     cout << "1. Celsius to Fahrenheit\n2. Celsius to Kelvin\n3. Fahrenheit to Celsius";
     cout << "\n4. Fahrenheit to Kelvin\n5. Kelvin to Celsius\n6. Kelvin to Fahrenheit" << endl;  cout << endl; 
-    int choice; 
+    int choice;    char YorN;
     cout << "Enter your choice (1-6): ";    cin >> choice;
     switch (choice){
         case 1:
@@ -81,5 +82,18 @@ int main(){
         default: 
             cout << "Enter a valid number!" << endl;
     }
-    return 0;
+    cout << "Convert another? (Y for yes and N for No): ";       cin >> YorN;
+    if (YorN == 'Y' || YorN == 'y')
+        continue;
+    else if (YorN == 'N' || YorN == 'n'){
+        cout << "--- Closing the program ---" << endl;
+        return 0;
+    }
+    while (YorN != 'Y' || YorN != 'y' || YorN != 'N' || YorN != 'n'){
+        cin.clear();
+        cin.ignore(20, '\n');
+        cout << "Enter Y or N!!" << endl;
+        cout << "Convert another? (Y for yes and N for No): ";       cin >> YorN;
+    }
+}
 }
