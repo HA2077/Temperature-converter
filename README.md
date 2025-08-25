@@ -35,3 +35,5 @@ Temperature in Fahrenheit: 77
 Still working on this progam and there is more to come in the future.
 
 Update 2.1 25/8/19 : Added a new function "Handlerrors" to check every input the program takes.
+
+Update 2.2 25/8/23 : Made a continuous loop and an "covert another" option and changed and added some lines.
