@@ -53,9 +53,9 @@ int main(){
     cout << "Temperature Converter" << endl;
     while (true){
     cout << "1. Celsius to Fahrenheit\n2. Celsius to Kelvin\n3. Fahrenheit to Celsius";
-    cout << "\n4. Fahrenheit to Kelvin\n5. Kelvin to Celsius\n6. Kelvin to Fahrenheit" << endl;  cout << endl; 
+    cout << "\n4. Fahrenheit to Kelvin\n5. Kelvin to Celsius\n6. Kelvin to Fahrenheit\n7. Info\n8. Exit" << endl;  cout << endl; 
     int choice;    char YorN;    float temperature;
-    cout << "Enter your choice (1-6): ";    cin >> choice;
+    cout << "Enter your choice (1-8): ";    cin >> choice;
     choicerror(choice);
     switch (choice){
         case 1:
@@ -88,6 +88,29 @@ int main(){
             TempInput(temperature);
             cout << "Temperature in Fahrenheit: " << kelvinToFahrenheit(temperature) << endl;
             break;
+        case 7:
+            cout << "=============== INFO ===============\n";
+            cout << "Temperature Scales:\n\n";
+            cout << "1. Celsius (°C):\n";
+            cout << "   - Metric scale\n";
+            cout << "   - Freezing point of water: 0°C\n";
+            cout << "   - Boiling point of water: 100°C\n\n";
+
+            cout << "2. Fahrenheit (°F):\n";
+            cout << "   - Commonly used in the USA\n";
+            cout << "   - Freezing point of water: 32°F\n";
+            cout << "   - Boiling point of water: 212°F\n\n";
+
+            cout << "3. Kelvin (K):\n";
+            cout << "   - SI unit of temperature\n";
+            cout << "   - Starts at absolute zero (0 K = -273.15°C)\n";
+            cout << "   - Freezing point of water: 273.15 K\n";
+            cout << "   - Boiling point of water: 373.15 K\n";
+            cout << "====================================\n";
+            break;
+        case 8:
+            cout << "--- Closing the program ---" << endl;
+            return 0;
         default: 
             cout << "Enter a valid number!" << endl;
     }
