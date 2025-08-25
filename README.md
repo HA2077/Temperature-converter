@@ -23,8 +23,10 @@ Temperature Converter
 4. Fahrenheit to Kelvin
 5. Kelvin to Celsius
 6. Kelvin to Fahrenheit
+7. Info
+8. Exit
 
-Enter your choice (1-6): 1
+Enter your choice (1-8): 1
 
 Enter the temperature: 25
 
