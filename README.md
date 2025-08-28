@@ -41,3 +41,5 @@ Update 2.1 25/8/19 : Added a new function "Handlerrors" to check every input the
 Update 2.2 25/8/23 : Made a continuous loop and an "convert another" option and changed and added some lines.
 
 Update 2.3 25/8/25 : Added info for more information about the temperature scales and an exit choice (7, 8).
+
+Update 2.4 25/8/28 : Better Output and checking the absolute zero.
