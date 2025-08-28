@@ -1,5 +1,9 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
+const float CELSIUS_MIN = -273.15;
+const float FAHRENHEIT_MIN = -459.67;
+const float KELVIN_MIN = 0.0;
 
 float celsiusToFahrenheit(float celsius){
     float fahrenheit = ((celsius * 9.0) / 5.0) + 32.0;
@@ -45,7 +49,7 @@ void choicerror(int choice){
                 cin.clear();
                 cin.ignore(20, '\n');
                 cout << "Enter a valid number!!" << endl;
-                cout << "Enter your choice (1-6): ";    cin >> choice;
+                cout << "Enter your choice (1-8): ";    cin >> choice;
             }
 }
 
@@ -61,32 +65,62 @@ int main(){
         case 1:
             cout << "Enter the temperature: ";       cin >> temperature;    cout << endl;
             TempInput(temperature);
-            cout << "Temperature in Fahrenheit: " << celsiusToFahrenheit(temperature) << endl;
+            if (temperature < CELSIUS_MIN){
+                cout << "Temperature below absolute zero (" << CELSIUS_MIN << "°C) is not possible!" << endl;
+                break;
+            }
+            cout << fixed << setprecision(2);
+            cout << "Temperature in Fahrenheit: " << celsiusToFahrenheit(temperature) << "°F" << endl;
             break;
         case 2:
             cout << "Enter the temperature: ";       cin >> temperature;    cout << endl;
             TempInput(temperature);
-            cout << "Temperature in Kelvin: " << celsiusToKelvin(temperature) << endl;
+            if (temperature < CELSIUS_MIN){
+                cout << "Temperature below absolute zero (" << CELSIUS_MIN << "°C) is not possible!" << endl;
+                break;
+            }
+            cout << fixed << setprecision(2);
+            cout << "Temperature in Kelvin: " << celsiusToKelvin(temperature) << "°K" << endl;
             break;   
         case 3:
             cout << "Enter the temperature: ";       cin >> temperature;    cout << endl;
             TempInput(temperature);
-            cout << "Temperature in Celsius: " << fahrenheitToCelsius(temperature) << endl;
+            if (temperature < FAHRENHEIT_MIN){
+                cout << "Temperature below absolute zero (" << FAHRENHEIT_MIN << "°F) is not possible!" << endl;
+                break;
+            }
+            cout << fixed << setprecision(2);
+            cout << "Temperature in Celsius: " << fahrenheitToCelsius(temperature) << "°C" << endl;
             break;
         case 4:
             cout << "Enter the temperature: ";       cin >> temperature;    cout << endl;
             TempInput(temperature);
-            cout << "Temperature in Kelvin: " << fahrenheitToKelvin(temperature) << endl;
+            if (temperature < FAHRENHEIT_MIN){
+                cout << "Temperature below absolute zero (" << FAHRENHEIT_MIN << "°F) is not possible!" << endl;
+                break;
+            }
+            cout << fixed << setprecision(2);
+            cout << "Temperature in Kelvin: " << fahrenheitToKelvin(temperature) << "°K" << endl;
             break;
         case 5:
             cout << "Enter the temperature: ";       cin >> temperature;    cout << endl;
             TempInput(temperature);
-            cout << "Temperature in Celsius: " << kelvinToCelsius(temperature) << endl;
+            if (temperature < KELVIN_MIN){
+                cout << "Temperature below absolute zero (" << KELVIN_MIN << "°K) is not possible!" << endl;
+                break;
+            }
+            cout << fixed << setprecision(2);
+            cout << "Temperature in Celsius: " << kelvinToCelsius(temperature) << "°C" << endl;
             break;
         case 6: 
             cout << "Enter the temperature: ";       cin >> temperature;    cout << endl;
             TempInput(temperature);
-            cout << "Temperature in Fahrenheit: " << kelvinToFahrenheit(temperature) << endl;
+            if (temperature < KELVIN_MIN){
+                cout << "Temperature below absolute zero (" << KELVIN_MIN << "°K) is not possible!" << endl;
+                break;
+            }
+            cout << fixed << setprecision(2);
+            cout << "Temperature in Fahrenheit: " << kelvinToFahrenheit(temperature) << "°F" << endl;
             break;
         case 7:
             cout << "=============== INFO ===============\n";
