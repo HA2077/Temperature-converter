@@ -1,10 +1,13 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
+
+// Constants for absolute zero in different scales
 const float CELSIUS_MIN = -273.15;
 const float FAHRENHEIT_MIN = -459.67;
 const float KELVIN_MIN = 0.0;
 
+// Conversion functions
 float celsiusToFahrenheit(float celsius){
     float fahrenheit = ((celsius * 9.0) / 5.0) + 32.0;
     return fahrenheit;
@@ -35,24 +38,26 @@ float kelvinToFahrenheit(float kelvin){
     return fahrenheit;
 }
 
-void TempInput(float temp){
+// Input validation functions
+void TempInput(float &temp){
     while(!(cin)){
                 cin.clear();
-                cin.ignore(20, '\n');
+                cin.ignore(10069, '\n');
                 cout << "Enter a valid number!!" << endl;
                 cout << "Enter the temperature: ";     cin >> temp;
             }
 }
 
-void choicerror(int choice){
+void choicerror(int &choice){
     while(!(cin)){
                 cin.clear();
-                cin.ignore(20, '\n');
+                cin.ignore(10069, '\n');
                 cout << "Enter a valid number!!" << endl;
                 cout << "Enter your choice (1-8): ";    cin >> choice;
             }
 }
 
+// Main function
 int main(){
     cout << "Temperature Converter" << endl;
     while (true){
@@ -61,6 +66,8 @@ int main(){
     int choice;    char YorN;    float temperature;
     cout << "Enter your choice (1-8): ";    cin >> choice;
     choicerror(choice);
+
+    // Switch case for menu options
     switch (choice){
         case 1:
             cout << "Enter the temperature: ";       cin >> temperature;    cout << endl;
@@ -122,6 +129,7 @@ int main(){
             cout << fixed << setprecision(2);
             cout << "Temperature in Fahrenheit: " << kelvinToFahrenheit(temperature) << "°F" << endl;
             break;
+        // Info about temperature scales
         case 7:
             cout << "=============== INFO ===============\n";
             cout << "Temperature Scales:\n\n";
@@ -148,6 +156,7 @@ int main(){
         default: 
             cout << "Enter a valid number!" << endl;
     }
+    // Prompt to convert another temperature
     cout << "Convert another? (Y for yes and N for No): ";       cin >> YorN;
     if (YorN == 'Y' || YorN == 'y')
         continue;
@@ -167,3 +176,4 @@ int main(){
 }
 }
 }
+// Code ends here 
