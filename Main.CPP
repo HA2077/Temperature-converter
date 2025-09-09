@@ -59,7 +59,7 @@ void choicerror(int &choice){
 
 // Main function
 int main(){
-    cout << "Temperature Converter" << endl;
+    cout << "--- Temperature Converter ---" << endl;
     while (true){
     cout << "1. Celsius to Fahrenheit\n2. Celsius to Kelvin\n3. Fahrenheit to Celsius";
     cout << "\n4. Fahrenheit to Kelvin\n5. Kelvin to Celsius\n6. Kelvin to Fahrenheit\n7. Info\n8. Exit" << endl;  cout << endl; 

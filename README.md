@@ -16,7 +16,7 @@ This project is part of my learning journey in C++ and Git/GitHub.
 ---
 
 ### 🛠️ Example
-Temperature Converter
+--- Temperature Converter ---
 1. Celsius to Fahrenheit
 2. Celsius to Kelvin
 3. Fahrenheit to Celsius
@@ -30,7 +30,7 @@ Enter your choice (1-8): 1
 
 Enter the temperature: 25
 
-Temperature in Fahrenheit: 77
+Temperature in Fahrenheit: 77.00°F
 
 ---
 
@@ -43,3 +43,5 @@ Update 2.2 25/8/23 : Made a continuous loop and an "convert another" option and 
 Update 2.3 25/8/25 : Added info for more information about the temperature scales and an exit choice (7, 8).
 
 Update 2.4 25/8/28 : Better Output and checking the absolute zero.
+
+Update 2.5 25/9/9  : Added comments and fixed Input validation functions + cin.ignore() buffer size.
