@@ -5,7 +5,6 @@ A **cross-platform C++ console application** that converts temperatures between 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-green)]()
-[![C++](https://img.shields.io/badge/C%2B%2B-17-blue)]()
 
 ## 🚀 Features
 
@@ -40,9 +39,9 @@ A **cross-platform C++ console application** that converts temperatures between 
 #### 🐧 Linux
 1. Download `temperature-converter-linux` from [Releases](../../releases)
 2. Make executable and run:
-   chmod +x temperature-converter-linux
 
-   ./temperature-converter-linux
+   - chmod +x temperature-converter-linux
+   - ./temperature-converter-linux
    
 
 ### Build from Source
@@ -85,7 +84,7 @@ Convert another? (Y for yes and N for No): N
 
 ## 🛠️ Technical Details
 
-- **Language:** C++17
+- **Language:** C++
 - **Build System:** CMake
 - **Cross-compilation:** MinGW-w64 for Windows builds on Linux
 - **Architecture:** x86_64
