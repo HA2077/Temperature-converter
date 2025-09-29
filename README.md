@@ -30,7 +30,7 @@ A **cross-platform C++ console application** that converts temperatures between 
 ### Download & Run
 
 #### 🪟 Windows
-1. Download `TemperatureConverter-windows.exe` from [Releases]
+1. Download `TemperatureConverter-windows.exe` from [Releases](../../releases)
 2. Double-click to run or use Command Prompt:
    ```cmd
    TemperatureConverter-windows.exe
@@ -55,7 +55,7 @@ cd Temperature-converter
 sudo apt install build-essential cmake mingw-w64
 
 # Build for both platforms
-chmod +x build_both.sh
+chmod +x Build.sh
 ./Build.sh
 
 # Executables will be in releases/ folder
